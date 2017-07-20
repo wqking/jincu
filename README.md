@@ -36,8 +36,8 @@ Apache License, Version 2.0
 
 ## Documentations
 
-(Install, compile, and run)[doc/install.md]
+[Install, compile, and run](doc/install.md)
 
-(Start your first game)[doc/start.md]
+[Start your first game](doc/start.md)
 
-(All documents)[doc/index.md]
+[All documents](doc/index.md)

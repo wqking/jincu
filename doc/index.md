@@ -1,12 +1,12 @@
 # Documentations
 
-(Install, compile, and run)[install.md]
+[Install, compile, and run](doc/install.md)
 
-(Start your first game)[start.md]
+[Start your first game](doc/start.md)
 
-(Scene management)[scene.md]
+[Scene management](scene.md)
 
-(Entity Component System)[ecs.md]
+[Entity Component System](ecs.md)
 
-(Built in components)[components.md]
+[Built in components](components.md)
 
