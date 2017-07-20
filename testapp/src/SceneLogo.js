@@ -23,9 +23,30 @@ import {
 
 import { SceneMenu, MenuRegister } from './SceneMenu.js';
 
+import backgroundImageName from './resources/matchthree/background.png';
 import chessAtlasImage from './resources/matchthree/chess_atlas.png';
 import chessAtlasText from './resources/matchthree/chess_atlas.txt';
-import backgroundImageName from './resources/matchthree/background.png';
+
+import atlasRunningManImage from './resources/testbed/animation_running_man.png';
+import atlasRunningManText from './resources/testbed/animation_running_man.txt';
+import boyAtlasImage from './resources/testbed/animation_yellow_boy.png';
+import boyAtlasText from './resources/testbed/animation_yellow_boy.txt';
+import catImage from './resources/testbed/cat.png';
+import dogImage from './resources/testbed/dog.png';
+import pigImage from './resources/testbed/pig.png';
+import rabbitImage from './resources/testbed/rabbit.png';
+
+const preloadAtlasList = [
+	{ image: atlasRunningManImage, text: atlasRunningManText },
+	{ image: boyAtlasImage, text: boyAtlasText },
+];
+
+const preloadTextureList = [
+	catImage,
+	dogImage,
+	pigImage,
+	rabbitImage,
+];
 
 const logoItemList = [
 	{ chess: '1', text: "J", color: Color.blue },
@@ -52,11 +73,13 @@ function createChessRender(chess)
 
 class SceneLogo extends Scene
 {
-	constructor(showProgressBar)
+	constructor(preloadResource)
 	{
 		super();
 		
-		this._showProgressBar = showProgressBar;
+		this._preloadResource = preloadResource;
+		this._loadingCount = 0;
+		this._animationFinished = false;
 	}
 
 	doOnEnter()
@@ -70,6 +93,8 @@ class SceneLogo extends Scene
 		const startX = viewWidth / 2 - (itemCount -1) * xSpace / 2;
 		const firstTweenDuration = 400;
 
+		this._animationFinished = false;
+
 		this.addEntity(
 			(new Entity())
 				.addComponent(new ComponentTransform(new Point(0, 0), new Scale(3.25, 3.25)))
@@ -77,7 +102,10 @@ class SceneLogo extends Scene
 		);
 
 		const timeline = this.getTweenList().timeline();
-		timeline.onComplete(this._doExitLogo.bind(this));
+		timeline.onComplete(()=>{
+			this._animationFinished = true;
+			this._doExitLogo();
+		});
 
 		let x = startX - xSpace;
 		let delay = 0;
@@ -122,7 +150,18 @@ class SceneLogo extends Scene
 			delay += 100;
 		}
 
-		if(this._showProgressBar) {
+		if(this._preloadResource) {
+			const preloadCallback = ()=>{
+				--this._loadingCount;
+				this._doExitLogo();
+			};
+			for(let item of preloadAtlasList) {
+				resourceManager.getAtlas(item, Atlas.formats.spritePackText, preloadCallback);
+			}
+			for(let item of preloadTextureList) {
+				resourceManager.getTexture(item, preloadCallback);
+			}
+			
 			const progressBarWidth = 600;
 			const progressBarHeight = 20;
 			const startPosition = new Point(viewWidth / 2 - progressBarWidth / 2, viewHeight - progressBarHeight - 20);
@@ -157,6 +196,13 @@ class SceneLogo extends Scene
 
 	_doExitLogo()
 	{
+		if(this._preloadResource && this._loadingCount > 0) {
+			return;
+		}
+		if(! this._animationFinished) {
+			return;
+		}
+
 		Application.getInstance().getSceneManager().switchScene(new SceneMenu());
 	}
 

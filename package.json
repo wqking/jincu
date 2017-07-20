@@ -16,9 +16,12 @@
   "keywords": [
     "es6",
     "modules",
-    "rollup",
-    "bundle",
-    "browser"
+    "jincu",
+    "game",
+    "engine",
+    "2d",
+	"html5",
+	"canvas"
   ],
   "author": "Wang Qi",
   "license": "Apache License, Version 2.0",
