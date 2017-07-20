@@ -1,0 +1,19 @@
+{
+	"parser": "babel-eslint",
+	"extends": "eslint:recommended",
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true,
+		"mocha": true
+	},
+	"globals": {
+		"Image" : false,
+	},
+	"rules": {
+		"no-console": "off",
+		"no-unused-vars": "warn",
+		"no-empty": "off",
+		"no-unreachable": "warn"
+	}
+}

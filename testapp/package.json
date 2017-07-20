@@ -1,0 +1,19 @@
+{
+  "name": "jincuapp",
+  "version": "0.0.1",
+  "homepage": "http://wqking.github.io/jincudemo",
+  "private": true,
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

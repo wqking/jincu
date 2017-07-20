@@ -1,0 +1,57 @@
+{
+  "name": "jincu",
+  "version": "0.0.1",
+  "description": "jincu library",
+  "main": "dist/jincu.js",
+  "module": "dist/jincu.m.js",
+  "jsnext:main": "dist/jincu.m.js",
+  "scripts": {
+    "prebuild": "eslint lib test",
+    "build": "rollup -c --environment BUILD:production",
+    "watch": "rollup -c -w",
+    "pretest": "rollup -c",
+    "test": "mocha",
+    "prepublish": "npm test"
+  },
+  "keywords": [
+    "es6",
+    "modules",
+    "rollup",
+    "bundle",
+    "browser"
+  ],
+  "author": "Wang Qi",
+  "license": "Apache License, Version 2.0",
+  "bugs": {
+    "url": "https://github.com/wqking/jincu/issues"
+  },
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "homepage": "https://github.com/wqking/jincu",
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "jquery": "^3.2.1",
+    "simd": "^2.0.0",
+    "wolfy87-eventemitter": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-register": "^6.18.0",
+    "babelrc-rollup": "^3.0.0",
+    "eslint": "^4.1.1",
+    "istanbul": "^0.4.5",
+    "jsdom": "^11.1.0",
+    "mocha": "^3.2.0",
+    "rollup": "^0.43.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-istanbul": "^1.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-watch": "^4.0.0"
+  }
+}
