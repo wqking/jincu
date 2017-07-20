@@ -34,3 +34,10 @@ Apache License, Version 2.0
  * Event driven.
  * Underlying render engine agnostic. Now the library using HTML5 canvas as the render engine, in the future WebGL will be added.
 
+## Documentations
+
+(Install, compile, and run)[doc/install.md]
+
+(Start your first game)[doc/start.md]
+
+(All documents)[doc/index.md]
