@@ -10,3 +10,5 @@
 
 [Built in components](components.md)
 
+[Geometries -- point, scale, size, and rect](geometry.md)
+
