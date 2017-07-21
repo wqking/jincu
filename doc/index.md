@@ -12,3 +12,5 @@
 
 [Geometries -- point, scale, size, and rect](geometry.md)
 
+[Color](color.md)
+
