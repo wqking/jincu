@@ -5,8 +5,8 @@ The best way to start is to see the code in testapp/src/index.js and testapp/pub
 ## Prepare the container DIV in the HTML file.
 
 ```html
-	<div id="canvasContainer" style="width:900px;height:600px;background-color:#eeeeee;margin:auto auto">
-	</div>
+<div id="canvasContainer" style="width:900px;height:600px;background-color:#eeeeee;margin:auto auto">
+</div>
 ```
 You can use any CSS style on the DIV. Jincu uses the entire DIV area as the canvas.
 
