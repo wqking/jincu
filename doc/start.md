@@ -2,7 +2,7 @@
 
 The best way to start is to see the code in testapp/src/index.js and testapp/public/index.html. They are the entry.
 
-Prepare the container DIV in the HTML file.
+## Prepare the container DIV in the HTML file.
 
 ```html
 	<div id="canvasContainer" style="width:900px;height:600px;background-color:#eeeeee;margin:auto auto">
@@ -10,14 +10,14 @@ Prepare the container DIV in the HTML file.
 ```
 You can use any CSS style on the DIV. Jincu uses the entire DIV area as the canvas.
 
-Here is the entry code in the JavaScript file.
+## The application entry code in the JavaScript file.
 
 ```javascript
 import { Application, Color } from 'jincu';
 let app = new Application({
 	container: '#canvasContainer',
 	backgroundColor: Color.fromValue(0xffeeeeee),
-	entryScene: new SceneLogo(true),
+	entryScene: new MyFirstScene(),
 	fps: 30,
 });
 app.run();
@@ -30,3 +30,25 @@ backgroundColor -- the default backgroundColor. The render engine will fill the 
 entryScene -- the scene object to start with.  
 fps -- the desired frame rate (frame per second).  
 
+## Prepare MyFirstScene
+
+```javascript
+import { Scene } from 'jincu';
+import backgroundImageName from './resources/matchthree/background.png';
+
+class MyFirstScene extends Scene
+{
+	doOnEnter()
+	{
+		this.addEntity(
+			(new Entity())
+			.addComponent(new ComponentTransform(new Point(-700, -230), new Scale(2.2, 2.2)))
+			.addComponent(createAndLoadImageComponent(backgroundImageName))
+		);
+	}
+}
+
+```
+Now we have a simple MyFirstScene. It shows an image.
+
+Now you can build and run the code to see what happens.
