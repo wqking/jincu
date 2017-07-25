@@ -1,19 +1,12 @@
 import {
 	Point,
-	Color,
 	Application,
-	Component,
 	ComponentAnchor,
-	ComponentRendererTouchHandler,
 	ComponentTransform,
-	Events,
 	Entity,
-	EntityUtil,
 	RenderAnchor,
-	createAndLoadTextComponent,
 	createAtlasRenderComponent,
-	Atlas,
-	Keyboard
+	Atlas
 } from 'jincu';
 
 import { TestCase } from '../TestCase.js';

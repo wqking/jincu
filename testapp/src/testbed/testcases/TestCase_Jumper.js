@@ -4,7 +4,6 @@ import {
 	Application,
 	Component,
 	ComponentAnchor,
-	ComponentRendererTouchHandler,
 	ComponentTransform,
 	Events,
 	Entity,
@@ -20,7 +19,6 @@ import { TestCase } from '../TestCase.js';
 import { TestBedRegister } from '../TestBed.js';
 import { UiUtil } from '../../UiUtil.js';
 
-import catImage from '../../resources/testbed/cat.png';
 import atlasRunningManImage from '../../resources/testbed/animation_running_man.png';
 import atlasRunningManText from '../../resources/testbed/animation_running_man.txt';
 
@@ -80,6 +78,9 @@ class JumperAiComponent extends Component
 			this._velocity = JumperAiComponent._initialVelocity;
 			this._acceleration = JumperAiComponent._initialAcceleration;
 			break;
+			
+		default:
+			break;
 		}
 	}
 
@@ -107,6 +108,9 @@ class JumperAiComponent extends Component
 				this.changeState(JumperAiComponent.states.idle);
 			}
 			break;
+			
+		default:
+			break;
 		}
 	}
 	
@@ -118,6 +122,9 @@ class JumperAiComponent extends Component
 			break;
 
 		case JumperAiComponent.states.jumping:
+			break;
+			
+		default:
 			break;
 		}
 	}

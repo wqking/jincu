@@ -3,28 +3,21 @@ import {
 	Scene,
 	Entity,
 	createAndLoadImageComponent,
-	createAtlasRenderComponent,
 	createAndLoadTextComponent,
 	createRectRenderComponent,
 	Point,
 	Scale,
 	Size,
 	RenderAnchor,
-	Component,
 	ComponentTransform,
 	ComponentLocalTransform,
 	ComponentAnchor,
 	ComponentContainerRender,
 	ComponentRendererTouchHandler,
-	Accessor,
-	Atlas,
 	Color,
-	Events,
-	LinearEase
+	Events
 } from 'jincu';
 
-import chessAtlasImage from './resources/matchthree/chess_atlas.png';
-import chessAtlasText from './resources/matchthree/chess_atlas.txt';
 import backgroundImageName from './resources/matchthree/background.png';
 
 class MenuRegister

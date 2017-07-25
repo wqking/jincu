@@ -2,21 +2,17 @@ import {
 	Point,
 	Size,
 	Scale,
-	Color,
 	Application,
 	ComponentAnchor,
-	ComponentRendererTouchHandler,
 	ComponentTransform,
 	Events,
 	Entity,
 	RenderAnchor,
-	createAndLoadTextComponent,
 	createAndLoadImageComponent,
 	TweenList,
 	tweenRepeatInfinitely,
 	Accessor,
 	Getter,
-	Setter,
 	ElasticEase,
 	CubicEase,
 	BounceEase,
@@ -183,7 +179,7 @@ class TestCase_Tween extends TestCase
 	{
 		const duration = 2000;
 
-		const target = this.addImage(imageName, new Point(spriteBoardEnd.x, spriteBoardEnd.y));
+		//const target = this.addImage(imageName, new Point(spriteBoardEnd.x, spriteBoardEnd.y));
 		const sprite = this.addImage(imageName, new Point(spriteBoardStart.x, spriteBoardStart.y));
 		
 		//target->getEntity()->getComponentByType<GComponentRender>()->setColor(colorSetAlpha(colorWhite, 127));

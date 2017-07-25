@@ -1,26 +1,5 @@
 import {
-	Application,
-	Scene,
-	Entity,
-	createAndLoadImageComponent,
-	createAtlasRenderComponent,
-	createAndLoadTextComponent,
-	createRectRenderComponent,
-	Point,
-	Scale,
-	Size,
-	RenderAnchor,
-	Component,
-	ComponentTransform,
-	ComponentLocalTransform,
-	ComponentAnchor,
-	ComponentContainerRender,
-	ComponentRendererTouchHandler,
-	Accessor,
-	Atlas,
-	Color,
-	Events,
-	LinearEase
+	Scene
 } from 'jincu';
 
 import { UiUtil } from '../UiUtil.js';

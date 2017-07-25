@@ -1,11 +1,6 @@
-//import registerServiceWorker from './registerServiceWorker';
-import jQuery from 'jquery';
-
-import { Application, Size, Color } from 'jincu';
+import { Application, Color } from 'jincu';
 import { SceneLogo } from './SceneLogo.js';
-import { SceneTestBed } from './testbed/SceneTestBed.js';
-
-//registerServiceWorker();
+export { SceneTestBed } from './testbed/SceneTestBed.js';
 
 let app = new Application({
 	container: '#canvasContainer',

@@ -2,7 +2,6 @@ import {
 	Accessor,
 	Point,
 	Scale,
-	Color,
 	Application,
 	Component,
 	ComponentAnchor,
@@ -13,7 +12,6 @@ import {
 	Entity,
 	RenderAnchor,
 	Atlas,
-	createAndLoadTextComponent,
 	createAndLoadImageComponent,
 	createAtlasRenderComponent,
 	
@@ -27,7 +25,6 @@ import { UiUtil } from '../../UiUtil.js';
 import catImage from '../../resources/testbed/cat.png';
 import dogImage from '../../resources/testbed/dog.png';
 import pigImage from '../../resources/testbed/pig.png';
-import rabbitImage from '../../resources/testbed/rabbit.png';
 import boyAtlasImage from '../../resources/testbed/animation_yellow_boy.png';
 import boyAtlasText from '../../resources/testbed/animation_yellow_boy.txt';
 
@@ -45,7 +42,6 @@ class TestCase_SceneGraph extends TestCase
 		const imageNameA = catImage;
 		const imageNameB = dogImage;
 		const imageNameC = pigImage;
-		const imageNameD = rabbitImage;
 		const x = position.x;
 		const y = position.y;
 	//	const xDelta = 150;

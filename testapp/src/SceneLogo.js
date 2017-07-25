@@ -31,6 +31,8 @@ import atlasRunningManImage from './resources/testbed/animation_running_man.png'
 import atlasRunningManText from './resources/testbed/animation_running_man.txt';
 import boyAtlasImage from './resources/testbed/animation_yellow_boy.png';
 import boyAtlasText from './resources/testbed/animation_yellow_boy.txt';
+import uiAtlasImage from './resources/ui_atlas.png';
+import uiAtlasText from './resources/ui_atlas.txt';
 import catImage from './resources/testbed/cat.png';
 import dogImage from './resources/testbed/dog.png';
 import pigImage from './resources/testbed/pig.png';
@@ -39,9 +41,11 @@ import rabbitImage from './resources/testbed/rabbit.png';
 const preloadAtlasList = [
 	{ image: atlasRunningManImage, text: atlasRunningManText },
 	{ image: boyAtlasImage, text: boyAtlasText },
+	{ image: uiAtlasImage, text: uiAtlasText },
 ];
 
 const preloadTextureList = [
+	backgroundImageName,
 	catImage,
 	dogImage,
 	pigImage,
@@ -66,8 +70,8 @@ function createChessRender(chess)
 {
 	const resourceManager = Application.getInstance().getResourceManager();
 	return createAtlasRenderComponent(resourceManager.getAtlas({
-		text: chessAtlasText,
-		image: chessAtlasImage
+		image: chessAtlasImage,
+		text: chessAtlasText
 	}, Atlas.formats.spritePackText), chess);
 }
 
@@ -83,6 +87,15 @@ class SceneLogo extends Scene
 	}
 
 	doOnEnter()
+	{
+		const resourceManager = Application.getInstance().getResourceManager();
+		resourceManager.getAtlas({
+			image: chessAtlasImage,
+			text: chessAtlasText
+		}, Atlas.formats.spritePackText, ()=>{ this._doStartLogo(); });
+	}
+	
+	_doStartLogo()
 	{
 		const resourceManager = Application.getInstance().getResourceManager();
 		const itemCount = logoItemList.length;
