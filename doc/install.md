@@ -16,8 +16,10 @@ In your application root folder, run,
 
 npm install --save jincu
 
+Note: since Jincu is in development stage, the NPM package may most likely be behind the code on Github. You should better download the source code and build your version.
+
 ### Link locally
-In Jincu root folder, run,
+Download the source code from Github, then in Jincu root folder, run,
 
 npm link
 
@@ -43,3 +45,20 @@ In jincu/testapp, run,
 
 npm start
 
+Be sure Jincu was linked built correctly. Here is the full steps to build the test application.
+
+In jincu/, run,
+
+npm link
+
+In jincu/testapp, run,
+
+npm link jincu
+
+in jincu/, run,
+
+npm run build
+
+in jincu/testapp, run,
+
+npm start

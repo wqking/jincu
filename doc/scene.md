@@ -21,7 +21,7 @@ Return the current scene object.
 switchScene(scene)
 switchScene(scene, transition)
 ```
-Switch current scene to `scene`.
+Switch current scene to `scene`.  
 **scene**: the scene object to switch to.  
 **transition**: the transition used to switch the scene.
 
