@@ -1,6 +1,8 @@
 # Tweening library
 
-In Jincu, the tweening library from (my cpgf library)[https://github.com/cpgf/cpgf] is converted from C++ to JavaScript. Tween is a power technique to make great animation.
+In Jincu, the tweening library from [my cpgf library](https://github.com/cpgf/cpgf) is converted from C++ to JavaScript. Tween is a power technique to make great animation.
+
+You may also read the [C++ tween library document here](http://www.cpgf.org/document/cpgf-tween-library.html).
 
 ## Main features
 
