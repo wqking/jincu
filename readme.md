@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Jincu is a 2D game framework. The first version is mostly converted from [my Gincu C++ 2D game framework](https://github.com/wqking/gincu).
+Jincu is a 2D game engine. The first version is mostly converted from [my Gincu C++ 2D game framework](https://github.com/wqking/gincu).
 The library is written in JavaScript ES6.
 
 ## Live demo
