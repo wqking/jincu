@@ -65,8 +65,9 @@ class TestCase_SceneGraph extends TestCase
 			.addComponent(new ComponentAnchor(anchor))
 			.addComponent(createAndLoadImageComponent(imageNameA))
 			.addComponent(new ComponentRendererTouchHandler().addOnTouch(Events.touchPressed, ()=>{
+				const localTransform = entityB.getComponent(Component.types.localTransform);
 				console.log("clicked: imageA");
-				entityB.getComponent(Component.types.localTransform).setVisible(! entityB.getComponent(Component.types.localTransform).isVisible());
+				localTransform.setVisible(! localTransform.isVisible());
 			}))
 		);
 
