@@ -40,4 +40,4 @@ Apache License, Version 2.0
 
 [Start your first game](doc/start.md)
 
-[All documents](doc/index.md)
+[All documents](doc/readme.md)
