@@ -30,7 +30,7 @@ Apache License, Version 2.0
  * Anchor and flip x/y (ComponentAnchor).
  * Sprite sheet.
  * Frame based animation.
- * Tween animation. The tween module is converted from (my cpgf library)[https://github.com/cpgf/cpgf].
+ * Tween animation. The tween module is converted from [my cpgf library](https://github.com/cpgf/cpgf).
  * Event driven.
  * Underlying render engine agnostic. Now the library using HTML5 canvas as the render engine, in the future WebGL will be added.
 
